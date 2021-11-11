@@ -60,7 +60,7 @@ export default {
     }
   },
   onLoad() {
-    // 2. 在小程序页面刚加载的时候，调用获取轮播图数据的方法
+    // 2. 在小程序页面刚加载的时候，调用获取轮播图数据的方法.
     this.getSwiperList()
     this.getNavList()
     this.getFloorList()
