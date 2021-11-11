@@ -1,7 +1,8 @@
 <template>
   <view>
     <!-- 使用自定义的搜索组件 -->
-    <my-search></my-search>
+    <!-- 注意：自定义组件的身上没有 @click 事件 -->
+    <my-search :bgcolor="'black'" :radius="20" @myclick="gotoSearch"></my-search>
 
     <!-- 左侧的滑动区域 -->
     <view class="scroll-view-container">
@@ -88,6 +89,12 @@
       gotoGoodsList(item) {
         uni.navigateTo({
           url:'/subpkg/goods_list/goods_list?cid=' + item.cat_id
+        })
+      },
+      gotoSearch() {
+        // console.log("ok")
+        uni.navigateTo({
+          url: '/subpkg/search/search'
         })
       }
     }
